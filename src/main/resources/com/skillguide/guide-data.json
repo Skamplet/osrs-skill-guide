@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "updated": "2026-06-16",
+  "skills": [
+    {
+      "skill": "MINING",
+      "methods": [
+        {
+          "name": "Copper/Tin ore",
+          "minLevel": 1,
+          "maxLevel": 15,
+          "xpPerAction": 17.5,
+          "actionName": "ore",
+          "notes": "Lumbridge Swamp or Varrock east mine. Drop everything for the fastest XP.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Mining_training"
+        },
+        {
+          "name": "Iron ore (power-mine)",
+          "minLevel": 15,
+          "maxLevel": 99,
+          "xpPerAction": 35,
+          "actionName": "ore",
+          "notes": "Power-mine iron at e.g. Al Kharid or Legacy mine. ~50k+ XP/h at high levels.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Mining_training"
+        }
+      ]
+    },
+    {
+      "skill": "WOODCUTTING",
+      "methods": [
+        {
+          "name": "Normal trees",
+          "minLevel": 1,
+          "maxLevel": 15,
+          "xpPerAction": 25,
+          "actionName": "log",
+          "notes": "Drop logs. Early grind, move on to oaks at 15.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Woodcutting_training"
+        },
+        {
+          "name": "Oak trees",
+          "minLevel": 15,
+          "maxLevel": 30,
+          "xpPerAction": 37.5,
+          "actionName": "log"
+        },
+        {
+          "name": "Willow trees",
+          "minLevel": 30,
+          "maxLevel": 99,
+          "xpPerAction": 67.5,
+          "actionName": "log",
+          "notes": "Draynor Village. Cheap, fast XP all the way to 99.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Woodcutting_training"
+        }
+      ]
+    },
+    {
+      "skill": "FISHING",
+      "methods": [
+        {
+          "name": "Shrimp/Anchovies (small net)",
+          "minLevel": 1,
+          "maxLevel": 20,
+          "xpPerAction": 10,
+          "actionName": "fish",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Fishing_training"
+        },
+        {
+          "name": "Trout/Salmon (fly fishing)",
+          "minLevel": 20,
+          "maxLevel": 99,
+          "xpPerAction": 50,
+          "actionName": "fish",
+          "notes": "Barbarian Village / Shilo. Drop fish for max XP.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Fishing_training"
+        }
+      ]
+    },
+    {
+      "skill": "ATTACK",
+      "methods": [
+        {
+          "name": "Do Waterfall Quest first (members)",
+          "minLevel": 1,
+          "maxLevel": 30,
+          "xpPerAction": 13750,
+          "actionName": "quest",
+          "members": true,
+          "notes": "Members quest. Grants 13,750 Attack XP with no skill requirements -> jumps you to about level 30.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Waterfall_Quest"
+        },
+        {
+          "name": "Slay monsters on Attack stance",
+          "minLevel": 1,
+          "maxLevel": 99,
+          "xpPerAction": 40,
+          "actionName": "kill",
+          "notes": "F2P-friendly. XP per action varies a lot by monster and gear; the value is a rough guideline."
+        }
+      ]
+    },
+    {
+      "skill": "STRENGTH",
+      "methods": [
+        {
+          "name": "Do Waterfall Quest first (members)",
+          "minLevel": 1,
+          "maxLevel": 30,
+          "xpPerAction": 13750,
+          "actionName": "quest",
+          "members": true,
+          "notes": "Members quest. Also grants 13,750 Strength XP.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/Waterfall_Quest"
+        },
+        {
+          "name": "Train on aggressive monsters (Aggressive stance)",
+          "minLevel": 1,
+          "maxLevel": 99,
+          "xpPerAction": 40,
+          "actionName": "kill",
+          "notes": "F2P-friendly. Use the Aggressive attack style. XP per action varies with monster and gear."
+        }
+      ]
+    },
+    {
+      "skill": "FLETCHING",
+      "members": true,
+      "methods": [
+        {
+          "name": "The Tourist Trap (start)",
+          "minLevel": 1,
+          "maxLevel": 10,
+          "xpPerAction": 4650,
+          "actionName": "quest",
+          "members": true,
+          "notes": "The Tourist Trap grants 4,650 Fletching + 4,650 Smithing XP.",
+          "wikiUrl": "https://oldschool.runescape.wiki/w/The_Tourist_Trap"
+        },
+        {
+          "name": "Headless arrows / arrow shafts",
+          "minLevel": 10,
+          "maxLevel": 99,
+          "xpPerAction": 15,
+          "actionName": "fletch",
+          "members": true,
+          "notes": "XP per action depends on the product; adjust in your own guide data."
+        }
+      ]
+    }
+  ],
+  "questGuides": [
+    {
+      "name": "Vampyre Slayer",
+      "quest": "VAMPYRE_SLAYER",
+      "reason": "F2P. No requirements. Rewards 4,825 Attack XP -> a quick early Attack boost.",
+      "recommendedAtLevel": 1,
+      "skillRewards": { "ATTACK": 4825 },
+      "questHelperName": "Vampyre Slayer",
+      "wikiUrl": "https://oldschool.runescape.wiki/w/Vampyre_Slayer"
+    },
+    {
+      "name": "The Knight's Sword",
+      "quest": "THE_KNIGHTS_SWORD",
+      "reason": "F2P. Rewards 12,725 Smithing XP -> skips you to about Smithing level 29. Needs a little Mining to mine blurite during the quest.",
+      "recommendedAtLevel": 1,
+      "skillRewards": { "SMITHING": 12725 },
+      "questHelperName": "The Knight's Sword",
+      "wikiUrl": "https://oldschool.runescape.wiki/w/The_Knight%27s_Sword"
+    },
+    {
+      "name": "Waterfall Quest",
+      "quest": "WATERFALL_QUEST",
+      "members": true,
+      "reason": "Members. No skill requirements. Rewards 13,750 Attack AND 13,750 Strength XP -> both jump to about level 30. One of the best early combat boosts.",
+      "recommendedAtLevel": 1,
+      "skillRewards": { "ATTACK": 13750, "STRENGTH": 13750 },
+      "questHelperName": "Waterfall Quest",
+      "wikiUrl": "https://oldschool.runescape.wiki/w/Waterfall_Quest"
+    },
+    {
+      "name": "The Tourist Trap",
+      "quest": "THE_TOURIST_TRAP",
+      "members": true,
+      "reason": "Grants 4,650 XP in both Fletching and Smithing, plus optional Agility/Thieving XP. A great early shortcut.",
+      "recommendedAtLevel": 1,
+      "skillRewards": { "FLETCHING": 4650, "SMITHING": 4650 },
+      "questHelperName": "The Tourist Trap",
+      "wikiUrl": "https://oldschool.runescape.wiki/w/The_Tourist_Trap"
+    },
+    {
+      "name": "Fight Arena",
+      "quest": "FIGHT_ARENA",
+      "members": true,
+      "reason": "12,175 Attack + 12,175 Thieving XP. A solid combat boost after Waterfall.",
+      "recommendedAtLevel": 30,
+      "skillRewards": { "ATTACK": 12175, "THIEVING": 12175 },
+      "questHelperName": "Fight Arena",
+      "wikiUrl": "https://oldschool.runescape.wiki/w/Fight_Arena"
+    }
+  ]
+}

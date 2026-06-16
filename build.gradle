@@ -1,0 +1,60 @@
+/*
+ * Standard RuneLite Plugin Hub build file.
+ * Mirrors https://github.com/runelite/example-plugin
+ */
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.runelite.net')
+    }
+    mavenCentral()
+}
+
+def runeLiteVersion = 'latest.release'
+
+dependencies {
+    compileOnly group: 'net.runelite', name: 'client', version: runeLiteVersion
+
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+
+    // Gson and OkHttp are provided by the RuneLite client via its 'client' dependency above,
+    // so they don't need to be declared separately.
+
+    testImplementation group: 'net.runelite', name: 'client', version: runeLiteVersion
+    testImplementation group: 'net.runelite', name: 'jshell', version: runeLiteVersion
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+group = 'com.skillguide'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Package runelite-plugin.properties into the jar root so the plugin can be sideloaded
+// into a normal RuneLite client (developer mode reads the 'plugins=' key from it).
+jar {
+    from('runelite-plugin.properties')
+}
+
+// Starts an isolated RuneLite dev client with the plugin loaded.
+//   ./gradlew.bat run                           (normal)
+//   ./gradlew.bat run --args="--developer-mode" (with RuneLite dev tools)
+tasks.register('run', JavaExec) {
+    group = 'application'
+    description = 'Runs an isolated RuneLite client with 1-99 Skill Guide loaded'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.skillguide.SkillGuideDevLauncher'
+    jvmArgs '-ea'
+}
